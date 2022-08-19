@@ -10,7 +10,7 @@
   <div class="d-flex flex-row justify-content-around">
     <% @bookmarks.each do |bookmark| %>
       <div class="card" style="width: 18rem;">
-        <%= image_tag(Movie.find(bookmark.movie_id).poster_url, class: "card-img-top") %>
+        <%= image_tag(Movie.find(bookmark.movie_id).poster_url, class: "card-img-top", height: 300) %>
         <div class="card-body">
           <div class="d-flex">
             <h5 class="card-title flex-grow-1"><%= Movie.find(bookmark.movie_id).title %></h5>
