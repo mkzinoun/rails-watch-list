@@ -28,3 +28,13 @@
     <% end %>
   </div>
 </div>
+<div class="container py-4">
+  <h3>Reviews</h3>
+  <div class="d-flex flex-row-reverse mb-4">
+    <%= link_to "Add a review", new_list_review_path(@list), class: "btn btn-primary" %>
+  </div>
+  <%= @reviews.each do |review| %>
+    <%= review.rating %>
+    <%= review.content %>
+  <% end %>
+</div>
