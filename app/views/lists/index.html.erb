@@ -6,17 +6,15 @@
 </div>
 
 <div class="container py-4">
-  <div class="d-flex">
-  <h4 class="flex-grow-1">My lists</h4>
-  <%= link_to "Create a list", new_list_path, class: "btn btn-primary" %>
+  <div class="d-flex mb-4">
+    <h4 class="flex-grow-1">My lists</h4>
+    <%= link_to "Create a list", new_list_path, class: "btn btn-primary" %>
   </div>
-  <ul>
+  <div class="d-flex flex-row justify-content-around">
     <% @lists.each do |list| %>
-      <div class="card-category">
-        <li>
-          <%= link_to list.name, list_path(list) %>
-        </li>
-      </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= link_to list.name, list_path(list), class: "card-category" %>
+    </div>
     <% end %>
-  </ul>
+  </div>
 </div>
